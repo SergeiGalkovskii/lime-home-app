@@ -1,0 +1,17 @@
+:host {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+
+  mgl-map {
+    height: 100%;
+  }
+
+  .marker {
+    cursor: pointer;
+  }
+}

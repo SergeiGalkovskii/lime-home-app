@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <mgl-map
+    [style]="style"
+    [zoom]="zoom"
+    [center]="center"
+    (load)="map = $event"
+    (moveEnd)="onMoveEnd($event)"
+  >
+    <mgl-marker
+      *ngFor="let marker of markers"
+      [lngLat]="[marker.position[1], marker.position[0]]"
+    >
+      <img
+        [src]="
+          activeMarker && marker.id === activeMarker.id
+            ? 'assets/imgs/home-active.svg'
+            : 'assets/imgs/home.svg'
+        "
+        class="marker"
+        (click)="onClickMarker(marker)"
+      />
+    </mgl-marker>
+  </mgl-map>
+  <app-place-info [place]="activeMarker" (book)="onBook()"></app-place-info>
+</div>
