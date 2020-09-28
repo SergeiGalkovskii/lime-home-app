@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EFE9E1;
+  padding: 15px;
+
+  img {
+      cursor: pointer;
+      user-select: none;
+  }
+}
