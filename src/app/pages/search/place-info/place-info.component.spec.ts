@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { DistancePipe } from 'src/app/core/core/pipes/distance.pipe';
 
 import { PlaceInfoComponent } from './place-info.component';
 
@@ -8,7 +9,7 @@ describe('PlaceInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlaceInfoComponent ]
+      declarations: [ PlaceInfoComponent, DistancePipe]
     })
     .compileComponents();
   }));
