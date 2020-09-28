@@ -1,0 +1,18 @@
+<div
+  class="place-info"
+  [ngClass]="{
+    'place-info-show': place,
+    'place-info-hide': !place
+  }"
+>
+  <div *ngIf="place" class="place-info-container">
+    <div class="place-info-container-img"></div>
+    <div class="place-info-container-data">
+      <h4>{{ place.title }}</h4>
+      <p *ngIf="place.distance">
+        {{ place.distance | distance }} km from the city center
+      </p>
+    </div>
+  </div>
+  <a class="place-info-book-btn" (click)="book.emit()">Book</a>
+</div>
