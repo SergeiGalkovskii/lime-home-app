@@ -13,7 +13,7 @@ describe('SearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [NgxMapboxGLModule.withConfig({
-        accessToken: '123123123',
+        accessToken: 'pk.eyJ1Ijoic2VyaGlpaGFsa292c2t5aSIsImEiOiJja2ZtdWJ3M3oyMmF5MnJudnhkYjkwOHcwIn0.RjayyJjsri2KRsD3YItwHA',
       }), HttpClientModule],
       declarations: [SearchComponent, DistancePipe, PlaceInfoComponent]
     })

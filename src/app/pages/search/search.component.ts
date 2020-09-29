@@ -64,7 +64,7 @@ export class SearchComponent implements OnInit {
     this.mapCenter = [marker.position[1], marker.position[0]];
   }
 
-  onMoveEnd(): void {
+  onMoveEnd(e: any): void {
     this.mapCenter = this.map.getCenter().toArray();
     this.getPlaces();
   }
